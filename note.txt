@@ -1,0 +1,8 @@
+2:3  12:5  700:100  5500:500
+
+atoi fonction en long puis check si plus grand/petit qu'un
+int puis renvoyer soit une erreur soit un int
+
+size 1 = return
+size 2 = specific algo
+size 3 = specific algo
