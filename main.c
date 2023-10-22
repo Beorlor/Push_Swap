@@ -18,12 +18,12 @@ int	main(int argc, char *argv[])
 	stack_init(&a, str_numb); //2 == argc
 	if (!stack_sorted(a))
 	{
-		if (stack_len(a) == 2)
+		if (list_size(a) == 2)
 			sa(&a);
-		else if (stack_len(a) == 3)
-			tiny_sort(&a);
-		else
-			push_swap(&a, &b);
+		else if (list_size(a) == 3)
+			three_sort(&a);
+		//else
+		//	push_swap(&a, &b);
 	}
-	free_stack(&a);
+	free_nodes(&a);
 }

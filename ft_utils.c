@@ -13,7 +13,11 @@ int	check_input(char *str_numb[])
 		while (str_numb[i][j])
 		{
 			if (!(str_numb[i][j] >= '0' && str_numb[i][j] <= '9'))
-				return (0);
+			{
+				free_str_numb(str_numb);
+				write(2, "Wrong Format\n", 13);
+				exit (1);
+			}
 			j++;
 		}
 		i++;
@@ -21,7 +25,7 @@ int	check_input(char *str_numb[])
 	return (1);
 }
 
-int	is_int(long n)
+static int	is_int(long n)
 {
 	return (n >= INT_MIN && n <= INT_MAX);
 }
@@ -46,7 +50,7 @@ int	ft_atoi(char *s, int *outOfRange)
 		res = res * 10 + (s[i] - '0');
 		++i;
 	}
-	if (!is_int(res * (long)sign));
+	if (is_int(res * (long)sign) == 0)
 	{
 		*outOfRange = 1;
 		return (0);

@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 	return (new);
 }
 
-char	**format(int ac, char *av[])
+char	**ft_format(int ac, char *av[])
 {
 	int		i;
 	char	**res;
