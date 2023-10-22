@@ -1,29 +1,29 @@
 #include "ft.h"
 
-int	check_input(int ac, char *av[])
+int	check_input(char *str_numb[])
 {
 	int	i;
 	int	j;
 
 	i = 1;
-	while (i < ac)
+	while (str_numb[i])
 	{
 		j = 0;
-		if (av[i][0] == '-' || av[i][0] == '+')
-		while (av[i][j])
+		if (str_numb[i][0] == '-' || str_numb[i][0] == '+')
+		while (str_numb[i][j])
 		{
-			if (!(av[i][j] >= '0' && av[i][j] <= '9'))
+			if (!(str_numb[i][j] >= '0' && str_numb[i][j] <= '9'))
 				return (0);
 			j++;
 		}
-		i++:
+		i++;
 	}
-	return (1)
+	return (1);
 }
 
 int	is_int(long n)
 {
-	return (n >= INT_MIN && n <= INT_MAX)
+	return (n >= INT_MIN && n <= INT_MAX);
 }
 
 int	ft_atoi(char *s, int *outOfRange)
