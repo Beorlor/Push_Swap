@@ -10,6 +10,7 @@ int	check_input(char *str_numb[])
 	{
 		j = 0;
 		if (str_numb[i][0] == '-' || str_numb[i][0] == '+')
+			j++;
 		while (str_numb[i][j])
 		{
 			if (!(str_numb[i][j] >= '0' && str_numb[i][j] <= '9'))

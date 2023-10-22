@@ -22,8 +22,15 @@ int	main(int argc, char *argv[])
 			sa(&a);
 		else if (list_size(a) == 3)
 			three_sort(&a);
+		else if (list_size(a) <= 5)
+			five_sort(&a, &b);
 		//else
 		//	push_swap(&a, &b);
+	}
+	while (a)
+	{
+		printf("%d ", a->num);
+		a = a->next;
 	}
 	free_nodes(&a);
 }

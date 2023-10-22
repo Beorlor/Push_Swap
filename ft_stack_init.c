@@ -1,5 +1,32 @@
 #include "ft.h"
 
+static int have_duplicate(t_node *stack)
+{
+    t_node *current = stack;
+    t_node *check;
+	int	dup;
+
+	dup = 0;
+    while (current)
+    {
+        check = current->next;
+        while (check)
+        {
+            if (current->num == check->num)
+                dup = 1;
+            check = check->next;
+        }
+        current = current->next;
+    }
+    if (dup)
+	{
+		free_nodes(&stack);
+		write(2, "Duplicate Detected\n", 19);
+		exit (1);
+	}
+}
+
+
 void	stack_init(t_node **a, char **str_numb)
 {
 	int	outOfRange;
@@ -22,4 +49,6 @@ void	stack_init(t_node **a, char **str_numb)
 		append_node(a, numb);
 		temp++;
 	}
+	free_str_numb(str_numb);
+	have_duplicate(*a);
 }
