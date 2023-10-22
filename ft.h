@@ -48,5 +48,6 @@ void rrb(t_node **b);
 void rrr(t_node **a, t_node **b);
 
 void	three_sort(t_node **a);
+void	five_sort(t_node **a, t_node **b);
 
 #endif

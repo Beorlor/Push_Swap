@@ -32,3 +32,8 @@ void	three_sort(t_node **a)
 	if ((*a)->num > (*a)->next->num)
 		sa(a);
 }
+
+void	five_sort(t_node **a, t_node **b)
+{
+
+}
