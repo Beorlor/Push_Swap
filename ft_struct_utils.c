@@ -1,13 +1,14 @@
 #include "ft.h"
 
-t_node	*new_node(int num)
+t_node	*new_node(int n)
 {
 	t_node	*node;
 
 	node = (t_node *)malloc(sizeof(t_node));
 	if (!node)
 		return (NULL);
-	node->num = num;
+	node->num = n;
+	node->index = -1;
 	node->next = NULL;
 	node->prev = NULL;
 	return (node);

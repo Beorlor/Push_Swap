@@ -10,6 +10,7 @@
 typedef struct s_node
 {
 	int	num;
+	int	index;
 	struct s_node	*next;
 	struct s_node	*prev;
 }		t_node;
@@ -49,5 +50,6 @@ void rrr(t_node **a, t_node **b);
 
 void	three_sort(t_node **a);
 void	five_sort(t_node **a, t_node **b);
+void radix_sort(t_node **a, t_node **b);
 
 #endif

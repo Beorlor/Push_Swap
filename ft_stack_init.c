@@ -1,5 +1,63 @@
 #include "ft.h"
 
+// Fonction d'échange pour le tri
+static void	swap_nodes(t_node **a, t_node **b)
+{
+	t_node *tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+// Fonction de tri par insertion
+static void	sort_node_array(t_node **array, int size)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	while (i < size)
+	{
+		j = i;
+		while (j > 0 && array[j - 1]->num > array[j]->num)
+		{
+			swap_nodes(&array[j], &array[j - 1]);
+			j--;
+		}
+		i++;
+	}
+}
+
+static void	assign_indexes(t_node *head)
+{
+	int		size;
+	t_node	*current;
+	t_node	**node_array;
+	int		i;
+
+	size = list_size(head);
+	node_array = (t_node **)malloc(sizeof(t_node *) * size);
+	if (!node_array)
+		return ;
+	current = head;
+	i = 0;
+	while (current)
+	{
+		node_array[i] = current;
+		current = current->next;
+		i++;
+	}
+	sort_node_array(node_array, size);
+	i = 0;
+	while (i < size)
+	{
+		node_array[i]->index = i;
+		i++;
+	}
+	free(node_array);
+}
+
 static int have_duplicate(t_node *stack)
 {
     t_node *current = stack;
@@ -51,4 +109,5 @@ void	stack_init(t_node **a, char **str_numb)
 	}
 	free_str_numb(str_numb);
 	have_duplicate(*a);
+	assign_indexes(*a);
 }

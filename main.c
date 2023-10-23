@@ -24,12 +24,12 @@ int	main(int argc, char *argv[])
 			three_sort(&a);
 		else if (list_size(a) <= 5)
 			five_sort(&a, &b);
-		//else
-		//	push_swap(&a, &b);
+		else
+			radix_sort(&a, &b);
 	}
 	while (a)
 	{
-		printf("%d ", a->num);
+		printf("%d ", a->index);
 		a = a->next;
 	}
 	free_nodes(&a);
