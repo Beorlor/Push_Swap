@@ -27,10 +27,11 @@ int	main(int argc, char *argv[])
 		else
 			radix_sort(&a, &b);
 	}
-	while (a)
+	/*while (a)
 	{
 		printf("%d ", a->index);
 		a = a->next;
 	}
-	free_nodes(&a);
+	free_nodes(&a);*/
+	return (0);
 }
