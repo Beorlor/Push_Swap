@@ -96,7 +96,7 @@ char	**ft_format(int ac, char *av[])
 	int		i;
 	char	**res;
 
-	res = (char **)malloc(sizeof(char *) * (ac - 1));
+	res = (char **)malloc(sizeof(char *) * ac);
 	if (!res)
 		return (NULL);
 	res[ac - 1] = NULL;

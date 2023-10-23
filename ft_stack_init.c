@@ -58,7 +58,7 @@ static void	assign_indexes(t_node *head)
 	free(node_array);
 }
 
-static int have_duplicate(t_node *stack)
+static void have_duplicate(t_node *stack)
 {
     t_node *current = stack;
     t_node *check;

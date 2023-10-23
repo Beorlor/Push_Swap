@@ -12,3 +12,11 @@ size 3 = specific algo
 
 pour n < 100 pour réduire le nombre d'opération, passer index en binaire
 donc rajouter une valeur char à ma definition de node
+
+https://www.youtube.com/watch?v=wRvipSG4Mmk
+https://github.com/Vikingu-del/42Projects/tree/main/42Projects/push_swap
+
+test :
+https://github.com/LeoFu9487/push_swap_tester
+https://github.com/SimonCROS/push_swap_tester
+https://github.com/o-reo/push_swap_visualizer
