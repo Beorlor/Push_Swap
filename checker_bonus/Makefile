@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hsabir <marvin@42lausanne.ch>              +#+  +:+       +#+         #
+#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/22 14:36:31 by hsabir            #+#    #+#              #
-#    Updated: 2021/12/02 12:10:44 by hsabir           ###   ########.fr        #
+#    Created: 2024/02/21 05:04:13 by jedurand          #+#    #+#              #
+#    Updated: 2024/02/21 05:04:15 by jedurand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
