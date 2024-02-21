@@ -6,7 +6,7 @@
 /*   By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 04:29:43 by jedurand          #+#    #+#             */
-/*   Updated: 2024/02/21 04:29:45 by jedurand         ###   ########.fr       */
+/*   Updated: 2024/02/21 06:11:22 by jedurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,17 +60,17 @@ void	push_swap(t_stack *a, t_stack *b)
 		five_handler(a, b);
 	else
 	{
-	        int		tmp = a->size;
-	        t_value	test;
-	        init_values(&test);
-	        select_pivots(a->size, a, &test);
-	        while (tmp--)
-	        {
-		  prep_b(a, b, &test);
+		int		tmp = a->size;
+		t_value	test;
+		init_values(&test);
+		select_pivots(a->size, a, &test);
+		while (tmp--)
+		{
+			prep_b(a, b, &test);
 		}
-	        a_to_b(test.ra, a, b, &count);
-	        test.rb += 2;
-	        b_to_a(test.rb, a, b, &count);
-	        b_to_a(test.pb - test.rb, a, b, &count);
+		a_to_b(test.ra, a, b, &count);
+		test.rb += 2;
+		b_to_a(test.rb, a, b, &count);
+		b_to_a(test.pb - test.rb, a, b, &count);
 	}
 }

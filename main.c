@@ -6,7 +6,7 @@
 /*   By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 04:29:48 by jedurand          #+#    #+#             */
-/*   Updated: 2024/02/21 04:29:50 by jedurand         ###   ########.fr       */
+/*   Updated: 2024/02/21 06:09:00 by jedurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,32 +48,6 @@ int	is_sorted(t_stack *a)
 		return (0);
 }
 
-/*
- * Declare the stacks and take the arguments,
- * if no argument is given return an error message.
- * while there is an argument left init the stack a,
- * and fill it with the arguments.
- */
-#include <stdio.h>
-void display_stack(t_stack *a)
-{
-    t_node *current_node;
-
-    if (!a)
-    {
-        printf("Stack is NULL\n");
-        return;
-    }
-
-    current_node = a->top;
-    printf("Stack A contents:\n");
-    while (current_node)
-    {
-        printf("%d\n", current_node->value);
-        current_node = current_node->next;
-    }
-}
-
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
@@ -91,12 +65,10 @@ int	main(int argc, char **argv)
 			return (0);
 		}
 		push_swap(a, b);
-		//display_stack(a);
-		//display_stack(b);
 		if (is_sorted(a))
-		  printf("is sorted\n");
+			printf("is sorted\n");
 		else
-		  printf("is not sorted\n");
+			printf("is not sorted\n");
 		free_all(a, b);
 	}
 }
