@@ -6,7 +6,7 @@
 /*   By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 04:32:53 by jedurand          #+#    #+#             */
-/*   Updated: 2024/02/21 04:32:55 by jedurand         ###   ########.fr       */
+/*   Updated: 2024/02/21 06:02:20 by jedurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include "push_swap.h"
 # include "libft/libft.h"
+# include "gnl/get_next_line.h"
 
 void	checker(t_stack *a, t_stack *b);
 
