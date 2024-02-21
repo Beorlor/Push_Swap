@@ -6,12 +6,11 @@
 /*   By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 04:31:06 by jedurand          #+#    #+#             */
-/*   Updated: 2024/02/21 06:06:55 by jedurand         ###   ########.fr       */
+/*   Updated: 2024/02/21 06:16:50 by jedurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-#include <stdio.h>
 
 static int	exceptions(int r, t_stack *a, t_stack *b)
 {
@@ -128,7 +127,7 @@ void	a_to_b(int stack_size, t_stack *a, t_stack *b, int *count)
 	while (tmp--)
 		push_rotate_a(a, b, &var);
 	if (var.ra > var.rb)
-		back_to_orig_ra(a, b, count, &var);
+        back_to_orig_ra(a, b, count, &var);
 	else
 		back_to_orig_rb(a, b, count, &var);
 	a_to_b(var.ra, a, b, count);

@@ -6,7 +6,7 @@
 /*   By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 04:29:48 by jedurand          #+#    #+#             */
-/*   Updated: 2024/02/21 06:09:00 by jedurand         ###   ########.fr       */
+/*   Updated: 2024/02/21 06:15:04 by jedurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,13 @@ int	is_sorted(t_stack *a)
 		return (0);
 }
 
+/*
+ * Declare the stacks and take the arguments,
+ * if no argument is given return an error message.
+ * while there is an argument left init the stack a,
+ * and fill it with the arguments.
+ */
+
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
@@ -65,10 +72,6 @@ int	main(int argc, char **argv)
 			return (0);
 		}
 		push_swap(a, b);
-		if (is_sorted(a))
-			printf("is sorted\n");
-		else
-			printf("is not sorted\n");
 		free_all(a, b);
 	}
 }
