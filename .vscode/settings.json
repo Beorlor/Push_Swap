@@ -1,7 +1,0 @@
-{
-	"files.associations": {
-		"limits.h": "c",
-		"unistd.h": "c",
-		"ft_command_s_p.C": "cpp"
-	}
-}
